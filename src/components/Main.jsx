@@ -169,11 +169,14 @@ const comics = [
 export default function Main() {
   return (
     <main>
-      <div className="container">
+      <div className="jumbotron">
+        <img src="./jumbotron.jpg" alt="jumbotron" />
+      </div>
+      <div className="container mt-3">
         <section id="comics ">
-          <div className="row g-4">
-            {comics.map((comic) => (
-              <figure className="comic-img-figure col-4 col-lg-2">
+          <div className="row g-3">
+            {comics.map((comic, index) => (
+              <figure key={index} className="comic-img-figure col-4 col-lg-2">
                 <div className="comic-img-main">
                   <img src={comic.thumb} alt={comic.title} />
                 </div>

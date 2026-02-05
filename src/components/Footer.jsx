@@ -1,50 +1,70 @@
+const footerLinks = [
+  {
+    title: "CD COMICS",
+    menuLinks: [
+      { url: "#", text: "Characters" },
+      { url: "#", text: "Comics" },
+      { url: "#", text: "Movies" },
+      { url: "#", text: "TV" },
+      { url: "#", text: "Games" },
+      { url: "#", text: "Videos" },
+      { url: "#", text: "News" },
+    ],
+  },
+  {
+    title: "SHOP",
+    menuLinks: [
+      { url: "#", text: "Shop DC" },
+      { url: "#", text: "Shop DC Collectibles" },
+    ],
+  },
+  {
+    title: "DC",
+    menuLinks: [
+      { url: "#", text: "Terms of Use" },
+      { url: "#", text: "Privacy policy" },
+      { url: "#", text: "Ad Choices" },
+      { url: "#", text: "Advertising" },
+      { url: "#", text: "Jobs" },
+      { url: "#", text: "Subscriptions" },
+      { url: "#", text: "Talent Workshops" },
+      { url: "#", text: "CPSC Certificates" },
+      { url: "#", text: "Ratings" },
+      { url: "#", text: "Shop Help" },
+      { url: "#", text: "Contact Us" },
+    ],
+  },
+  {
+    title: "SITES",
+    menuLinks: [
+      { url: "#", text: "DC" },
+      { url: "#", text: "MAD Magazine" },
+      { url: "#", text: "DC Kids" },
+      { url: "#", text: "DC Universe" },
+      { url: "#", text: "DC Power Visa" },
+    ],
+  },
+];
+
 export default function Footer() {
   return (
     <footer>
       <div className="footer">
         <div className="footer-bg text-white">
           <div className="container d-flex justify-content-between pt-3 pb-5 ">
-            <div>
-              <h6>DC COMICS</h6>
-              <ul className="list-unstyled text-secondary">
-                <li>Characters</li>
-                <li>Comics</li>
-                <li>Movies</li>
-                <li>TV</li>
-                <li>Videos</li>
-                <li>News</li>
-              </ul>
-              <h6>SHOP</h6>
-              <ul className="list-unstyled text-secondary">
-                <li>Shop DC</li>
-                <li>Shop DC Collectibles</li>
-              </ul>
-            </div>
-            <div>
-              <h6>DC</h6>
-              <ul className="list-unstyled text-secondary">
-                <li>Terms of Use</li>
-                <li>Privacy policy</li>
-                <li>Ad Choices</li>
-                <li>Advertising</li>
-                <li>Jobs</li>
-                <li>Subscriptions</li>
-                <li>Talent Workshops</li>
-                <li>CPSC Certificates</li>
-                <li>Ratings</li>
-                <li>Shop Help</li>
-                <li>Contact Us</li>
-              </ul>
-            </div>
-            <div>
-              <h6>SITES</h6>
-              <ul className="list-unstyled text-secondary">
-                <li>DC</li>
-                <li>MAD Magazine</li>
-                <li>DC Kids</li>
-                <li>DC Universe</li>
-                <li>DC Power Visa</li>
-              </ul>
+            <div className="row mb-4">
+              {footerLinks.map((linkTitle, index) => (
+                <div key={index} className="col-6 col-md-3">
+                  <h6>{linkTitle.title}</h6>
+                  <ul className="list-unstyled text-secondary">
+                    {linkTitle.menuLinks.map((link, index) => (
+                      <li key={index}>
+                        <a href={link.url}>{link.text}</a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </div>
             <img src="public/dc-logo-bg.png" alt="" />
           </div>
