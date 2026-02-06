@@ -171,10 +171,10 @@ const comicsCards = [
 
 const serviceslinks = [
   { src: "./public/buy-comics-digital-comics.png", text: "Digital Comics" },
-  { src: "./public/buy-comics-digital-comics.png", text: "Digital Comics" },
-  { src: "./public/buy-comics-digital-comics.png", text: "Digital Comics" },
-  { src: "./public/buy-comics-digital-comics.png", text: "Digital Comics" },
-  { src: "./public/buy-comics-digital-comics.png", text: "Digital Comics" },
+  { src: "./public/buy-comics-merchandise.png", text: "DC Merchandise " },
+  { src: "./public/buy-comics-shop-locator.png", text: "Comic shop Locator" },
+  { src: "./public/buy-comics-subscriptions.png", text: "subscriptions" },
+  { src: "./public/buy-dc-power-visa.svg", text: "DC Power visa" },
 ];
 
 export default function Main() {

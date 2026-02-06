@@ -1,6 +1,5 @@
 import ComicsCards from "./ComicsCard";
 
-ComicsCards;
 export default function ComicsList({ comics }) {
   return (
     <section className="container mt-3">
