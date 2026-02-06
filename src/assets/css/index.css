@@ -36,8 +36,8 @@ main {
 }
 
 .comic-img-main {
-  width: 100%;
-  aspect-ratio: 1/1;
+  width: 80%;
+  aspect-ratio: 8/13;
   overflow: hidden;
 }
 
@@ -52,6 +52,12 @@ main {
 .comic-img-figure figcaption {
   margin-top: 5px;
   font-size: 12px;
+}
+
+.service-section {
+  background-color: #0982f9;
+  font-size: 10px;
+  height: 10vh;
 }
 
 /* Footer */
@@ -70,6 +76,7 @@ footer .footer-bg {
 
 footer .footer-bg img {
   height: 250px;
+  scale: 2;
 }
 #follow-us {
   background-color: #303030;

@@ -1,4 +1,6 @@
-const comics = [
+import ComicsList from "./ComicsList";
+
+const comicsCards = [
   {
     id: 1,
     title: "Action Comics #1000: The Deluxe Edition",
@@ -169,23 +171,38 @@ const comics = [
 export default function Main() {
   return (
     <main>
-      <div className="jumbotron">
-        <img src="./jumbotron.jpg" alt="jumbotron" />
-      </div>
-      <div className="container mt-3">
-        <section id="comics ">
-          <div className="row g-3">
-            {comics.map((comic, index) => (
-              <figure key={index} className="comic-img-figure col-4 col-lg-2">
-                <div className="comic-img-main">
-                  <img src={comic.thumb} alt={comic.title} />
-                </div>
-                <figcaption>{comic.series}</figcaption>
-              </figure>
-            ))}
+      <section>
+        <div className="jumbotron">
+          <img src="./jumbotron.jpg" alt="jumbotron" />
+        </div>
+      </section>
+
+      <ComicsList comics={comicsCards} />
+
+      <section>
+        <div className="service-section d-flex justify-content-around px-5">
+          <div className="d-flex gap-2 align-items-center flex-wrap">
+            <img className="img-fluid w-25" src="./public/buy-comics-digital-comics.png" alt="" />
+            <p>Digital Comics</p>
           </div>
-        </section>
-      </div>
+          <div className="d-flex gap-2 align-items-center flex-wrap align-content-center">
+            <img className="img-fluid w-25" src="./public/buy-comics-digital-comics.png" alt="" />
+            <p>Digital Comics</p>
+          </div>
+          <div className="d-flex gap-2 align-items-center flex-wrap">
+            <img className="img-fluid w-25" src="./public/buy-comics-digital-comics.png" alt="" />
+            <p>Digital Comics</p>
+          </div>
+          <div className="d-flex gap-2 align-items-center flex-wrap">
+            <img className="img-fluid w-25" src="./public/buy-comics-digital-comics.png" alt="" />
+            <p>Digital Comics</p>
+          </div>
+          <div className="d-flex gap-2 align-items-center flex-wrap">
+            <img className="img-fluid w-25" src="./public/buy-comics-digital-comics.png" alt="" />
+            <p>Digital Comics</p>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
