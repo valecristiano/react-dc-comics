@@ -1,4 +1,5 @@
 import ComicsList from "./ComicsList";
+import ServiceSection from "./ServiceSection";
 
 const comicsCards = [
   {
@@ -168,6 +169,14 @@ const comicsCards = [
   },
 ];
 
+const serviceslinks = [
+  { src: "./public/buy-comics-digital-comics.png", text: "Digital Comics" },
+  { src: "./public/buy-comics-digital-comics.png", text: "Digital Comics" },
+  { src: "./public/buy-comics-digital-comics.png", text: "Digital Comics" },
+  { src: "./public/buy-comics-digital-comics.png", text: "Digital Comics" },
+  { src: "./public/buy-comics-digital-comics.png", text: "Digital Comics" },
+];
+
 export default function Main() {
   return (
     <main>
@@ -178,31 +187,7 @@ export default function Main() {
       </section>
 
       <ComicsList comics={comicsCards} />
-
-      <section>
-        <div className="service-section d-flex justify-content-around px-5">
-          <div className="d-flex gap-2 align-items-center flex-wrap">
-            <img className="img-fluid w-25" src="./public/buy-comics-digital-comics.png" alt="" />
-            <p>Digital Comics</p>
-          </div>
-          <div className="d-flex gap-2 align-items-center flex-wrap align-content-center">
-            <img className="img-fluid w-25" src="./public/buy-comics-digital-comics.png" alt="" />
-            <p>Digital Comics</p>
-          </div>
-          <div className="d-flex gap-2 align-items-center flex-wrap">
-            <img className="img-fluid w-25" src="./public/buy-comics-digital-comics.png" alt="" />
-            <p>Digital Comics</p>
-          </div>
-          <div className="d-flex gap-2 align-items-center flex-wrap">
-            <img className="img-fluid w-25" src="./public/buy-comics-digital-comics.png" alt="" />
-            <p>Digital Comics</p>
-          </div>
-          <div className="d-flex gap-2 align-items-center flex-wrap">
-            <img className="img-fluid w-25" src="./public/buy-comics-digital-comics.png" alt="" />
-            <p>Digital Comics</p>
-          </div>
-        </div>
-      </section>
+      <ServiceSection links={serviceslinks} />
     </main>
   );
 }
